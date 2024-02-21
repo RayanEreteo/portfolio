@@ -42,6 +42,7 @@
 
 html, body{
   background: white !important;
+  overflow-x: hidden;
 }
 
 .button:hover{
