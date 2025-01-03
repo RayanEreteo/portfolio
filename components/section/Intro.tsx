@@ -7,8 +7,8 @@ function Intro() {
     <section>
       <div id="about" className="flex justify-around items-center h-screen text-white">
         <div className="presentation-container">
-          <h1 className="text-5xl">Bonjour, je suis <span className="text-blue-500">Rayan</span></h1>
-          <p className="role text-2xl mt-3">Développeur web fullstack</p>
+          <h1 className="text-6xl">Bonjour, je suis <span className="text-blue-500">Rayan</span></h1>
+          <p className="role text-4xl mt-3">Développeur web fullstack</p>
             <p className="mt-4 max-w-lg text-xl">
             Passionné par les nouvelles technologies et le développement web, j'aime créer des applications performantes et intuitives.
             Toujours en quête de nouveaux défis, je suis prêt à apporter mes compétences et mon enthousiasme à votre projet.
