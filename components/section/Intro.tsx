@@ -9,10 +9,13 @@ function Intro() {
         <div className="presentation-container">
           <h1 className="text-5xl">Bonjour, je suis <span className="text-blue-500">Rayan</span></h1>
           <p className="role text-2xl mt-3">Développeur web fullstack</p>
-          <p>Je suis un</p>
+            <p className="mt-4 max-w-lg text-xl">
+            Passionné par les nouvelles technologies et le développement web, j'aime créer des applications performantes et intuitives.
+            Toujours en quête de nouveaux défis, je suis prêt à apporter mes compétences et mon enthousiasme à votre projet.
+            </p>
         </div>
         <div className="picture-container">
-          <Image src={"/moi.png"}  alt="moi" width={300} height={200}/>
+          <Image src={"/moi.png"} alt="moi" width={300} height={200} className="rounded shadow-lg border-4 border-white"/>
         </div>
       </div>
     </section>
