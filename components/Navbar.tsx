@@ -7,7 +7,7 @@ function Navbar() {
     function downloadCV() {
         window.open('/CV_Développeur.pdf')
     }
-
+    
     return (
         <nav>
             <div className="navbar-container flex flex-row items-center justify-around h-[5rem] text-[#FBE2E2] bg-[#002654] border-b-[1.2px] border-[#263d6c]">
