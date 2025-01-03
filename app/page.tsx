@@ -7,6 +7,7 @@ export default function Home() {
     <div className="font-orbitron">
       <main>
         <Navbar />
+        <Intro />
       </main>
     </div>
   );
