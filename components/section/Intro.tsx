@@ -1,6 +1,10 @@
 function Intro() {
   return (
-    <div>Bio</div>
+    <section>
+      <div className="flex justify-center items-center h-screen text-white">
+        
+      </div>
+    </section>
   )
 }
 
