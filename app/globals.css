@@ -61,4 +61,14 @@ body {
   border-radius: 10px;
   background-color: #0066ff;
   margin-top: 10px;
+  animation: increase-width 1s ease;
+}
+
+@keyframes increase-width{
+  0%{
+    width: 0px;
+  }
+  100%{
+    width: 100px;
+  }
 }
