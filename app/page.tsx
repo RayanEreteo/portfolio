@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Intro from "@/components/section/Intro";
+import SectionTitle from "@/components/SectionTitle";
 import Image from "next/image";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <main>
         <Navbar />
         <Intro />
+        <SectionTitle title="Pourquoi moi ?" />
       </main>
     </div>
   );
