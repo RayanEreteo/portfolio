@@ -10,7 +10,7 @@ function Navbar() {
     
     return (
         <nav>
-            <div className="navbar-container flex flex-row items-center justify-around h-[5rem] text-[#FBE2E2] bg-[#002654] border-b-[1.2px] border-[#263d6c]">
+            <div id='navbar' className="navbar-container flex flex-row items-center justify-around h-[5rem] text-[#FBE2E2] bg-[#002654] border-b-[1.2px] border-[#263d6c]">
                 <div className="name glow text-[30px]">Rayan Ereteo</div>
                 <div className="right-side inline-flex items-center">
                     <div className="links flex justify-between w-[470px]">
