@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Orbitron } from "next/font/google";
+import { Montserrat, Orbitron } from "next/font/google";
 import "./globals.css";
 
 const orbitron = Orbitron({
   variable: "--font-orbitron",
+  subsets: ["latin"],
+});
+
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
 });
 
@@ -20,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${orbitron.variable} antialiased`}
+        className={`${orbitron.variable} ${montserrat.variable} antialiased`}
       >
         {children}
       </body>

@@ -5,11 +5,15 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="font-orbitron">
+    <div>
       <main>
-        <Navbar />
-        <Intro />
-        <SectionTitle title="Pourquoi moi ?" />
+        <div className="font-orbitron">
+          <Navbar />
+        </div>
+        <div className="font-montserrat">
+          <Intro />
+          <SectionTitle title="Pourquoi moi ?" />
+        </div>
       </main>
     </div>
   );

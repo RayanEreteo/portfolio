@@ -14,6 +14,7 @@ export default {
       },
       fontFamily: {
         orbitron: ["var(--font-orbitron)", "sans-serif"],
+        montserrat: ["var(--font-montserrat)", "sans-serif"],
       },
     },
   },
