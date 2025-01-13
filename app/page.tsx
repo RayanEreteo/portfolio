@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Intro from "@/components/section/Intro";
+import Whyme from "@/components/section/Whyme";
 import SectionTitle from "@/components/SectionTitle";
 import Image from "next/image";
 
@@ -13,6 +14,7 @@ export default function Home() {
         <div className="font-montserrat">
           <Intro />
           <SectionTitle title="Pourquoi moi ?" />
+          <Whyme />
         </div>
       </main>
     </div>
