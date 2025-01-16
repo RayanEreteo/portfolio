@@ -23,11 +23,13 @@ function Whyme() {
                 </div>
             </div>
             <div id="languages-framework" className="flex flex-row justify-around mt-[5rem]">
-                <div className="languages">
-                    <h1 className="text-center text-3xl font-extrabold mb-5">Langages :</h1>
-                    <Image src="/langframesvg/html5.svg" alt="html5" width={LANGUAGE_SVG_SIZE} height={LANGUAGE_SVG_SIZE} />
-                    <Image src="/langframesvg/css3.svg" alt="css3" width={LANGUAGE_SVG_SIZE} height={LANGUAGE_SVG_SIZE} />
-                    <Image src="/langframesvg/typescript.svg" alt="typescript" width={LANGUAGE_SVG_SIZE} height={LANGUAGE_SVG_SIZE} />
+                <div className="languages bg-[#0f327e] rounded border border-blue-400">
+                    <h1 className="text-center text-3xl font-extrabold mb-5 ">Langages :</h1>
+                    <div className="svg-container flex flex-row">
+                        <Image src="/langframesvg/html5.svg" alt="html5" width={LANGUAGE_SVG_SIZE} height={LANGUAGE_SVG_SIZE} />
+                        <Image src="/langframesvg/css3.svg" alt="css3" width={LANGUAGE_SVG_SIZE} height={LANGUAGE_SVG_SIZE} />
+                        <Image src="/langframesvg/typescript.svg" alt="typescript" width={LANGUAGE_SVG_SIZE} height={LANGUAGE_SVG_SIZE} />
+                    </div>
                 </div>
                 <div className="framework">
                     <h1 className="text-center text-3xl font-extrabold mb-5">Framework :</h1>
