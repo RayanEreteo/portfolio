@@ -1,3 +1,4 @@
+import LangFrameworkContainer from "../LangFrameworkContainer"
 import SoftSkillsCard from "../SoftSkillsCard"
 import Image from "next/image"
 
@@ -25,14 +26,24 @@ function Whyme() {
             <div id="languages-framework" className="flex flex-row justify-around mt-[5rem]">
                 <div className="languages bg-[#0f327e] rounded border border-blue-400">
                     <h1 className="text-center text-3xl font-extrabold mb-5 ">Langages :</h1>
-                    <div className="svg-container flex flex-row">
-                        <Image src="/langframesvg/html5.svg" alt="html5" width={LANGUAGE_SVG_SIZE} height={LANGUAGE_SVG_SIZE} />
-                        <Image src="/langframesvg/css3.svg" alt="css3" width={LANGUAGE_SVG_SIZE} height={LANGUAGE_SVG_SIZE} />
-                        <Image src="/langframesvg/typescript.svg" alt="typescript" width={LANGUAGE_SVG_SIZE} height={LANGUAGE_SVG_SIZE} />
+                    <div className="svg-container flex flex-row justify-around p-4 w-[40rem]">
+                        <LangFrameworkContainer LANGUAGE_SVG_SIZE={LANGUAGE_SVG_SIZE} SVGName="html5" TechName="HTML5" />
+                        <LangFrameworkContainer LANGUAGE_SVG_SIZE={LANGUAGE_SVG_SIZE} SVGName="css3" TechName="CSS3" />
+                        <LangFrameworkContainer LANGUAGE_SVG_SIZE={LANGUAGE_SVG_SIZE} SVGName="typescript" TechName="Typescript" />
+                        <LangFrameworkContainer LANGUAGE_SVG_SIZE={LANGUAGE_SVG_SIZE} SVGName="php" TechName="PHP" />
+                        <LangFrameworkContainer LANGUAGE_SVG_SIZE={LANGUAGE_SVG_SIZE} SVGName="java" TechName="Java" />
                     </div>
                 </div>
-                <div className="framework">
+                <div className="framework bg-[#0f327e] rounded border border-blue-400">
                     <h1 className="text-center text-3xl font-extrabold mb-5">Framework :</h1>
+                    <div className="svg-container flex flex-row justify-around p-4 w-[40rem]">
+                        <LangFrameworkContainer LANGUAGE_SVG_SIZE={LANGUAGE_SVG_SIZE} SVGName="nodejs" TechName="NODEJS" />
+                        <LangFrameworkContainer LANGUAGE_SVG_SIZE={LANGUAGE_SVG_SIZE} SVGName="express" TechName="EXPRESS" />
+                        <LangFrameworkContainer LANGUAGE_SVG_SIZE={LANGUAGE_SVG_SIZE} SVGName="nextjs" TechName="NextJS" />
+                        <LangFrameworkContainer LANGUAGE_SVG_SIZE={LANGUAGE_SVG_SIZE} SVGName="spring" TechName="Spring" />
+                        <LangFrameworkContainer LANGUAGE_SVG_SIZE={LANGUAGE_SVG_SIZE} SVGName="symfony" TechName="Symfony" />
+                        <LangFrameworkContainer LANGUAGE_SVG_SIZE={LANGUAGE_SVG_SIZE} SVGName="tailwind" TechName="TailwindCSS" />
+                    </div>
                 </div>
             </div>
         </div>
