@@ -6,7 +6,7 @@ function Whyme() {
     const LANGUAGE_SVG_SIZE = 80
 
     return (
-        <div className="text-[#FBE2E2] flex flex-col mt-[5rem] h-[100vh]">
+        <div className="text-[#FBE2E2] flex flex-col mt-[5rem] h-[90vh]">
             <div className="soft-skills mb-6">
                 <h1 className="text-center text-3xl font-extrabold mb-5">Soft Skills : </h1>
                 <div className="text-center flex flex-row justify-center items-center">
