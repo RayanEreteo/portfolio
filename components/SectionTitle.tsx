@@ -1,10 +1,11 @@
 interface SectionTitleProps {
     title: string
+    id?: string
 }
 
-function SectionTitle({ title }: SectionTitleProps) {
+function SectionTitle({ title, id }: SectionTitleProps) {
   return (
-    <div className={`section-title bg-red-700 text-center mb-6`}>
+    <div id={id} className={`section-title bg-red-700 text-center mb-6`}>
         <h2 className="text-4xl text-white">{title}</h2>
     </div>
   )
