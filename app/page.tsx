@@ -13,7 +13,7 @@ export default function Home() {
         </div>
         <div className="font-montserrat">
           <Intro />
-          <SectionTitle title="Pourquoi moi ?" />
+          <SectionTitle title="Pourquoi moi ?" id="skills"/>
           <Whyme />
         </div>
       </main>
