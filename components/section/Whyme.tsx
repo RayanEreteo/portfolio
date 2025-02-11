@@ -1,6 +1,5 @@
 import LangFrameworkContainer from "../LangFrameworkContainer"
 import SoftSkillsCard from "../SoftSkillsCard"
-import Image from "next/image"
 
 function Whyme() {
     const LANGUAGE_SVG_SIZE = 80
@@ -33,7 +32,6 @@ function Whyme() {
                         <LangFrameworkContainer LANGUAGE_SVG_SIZE={LANGUAGE_SVG_SIZE} SVGName="php" TechName="PHP" />
                         <LangFrameworkContainer LANGUAGE_SVG_SIZE={LANGUAGE_SVG_SIZE} SVGName="java" TechName="Java" />
                         <LangFrameworkContainer LANGUAGE_SVG_SIZE={LANGUAGE_SVG_SIZE} SVGName="mysql" TechName="MySQL" />
-
                     </div>
                 </div>
                 <div className="framework bg-[#0f327e] rounded border border-blue-400">
