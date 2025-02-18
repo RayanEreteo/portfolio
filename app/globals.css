@@ -76,3 +76,8 @@ body {
 .white-svg{
   filter: invert(100%);
 }
+
+.project-card{
+  background-image: url("/thumbnail/portfolio.png");
+  background-size: cover;
+}
