@@ -1,9 +1,9 @@
 import Navbar from "@/components/Navbar";
+import Contact from "@/components/section/Contact";
 import Intro from "@/components/section/Intro";
 import Projects from "@/components/section/Projects";
 import Whyme from "@/components/section/Whyme";
 import SectionTitle from "@/components/SectionTitle";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -18,6 +18,8 @@ export default function Home() {
           <Whyme />
           <SectionTitle title="Projets" id="projects"/>
           <Projects />
+          <SectionTitle title="Contact" id="contact"/>
+          <Contact />
         </div>
       </main>
     </div>
