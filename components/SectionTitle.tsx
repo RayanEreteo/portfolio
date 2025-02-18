@@ -5,7 +5,7 @@ interface SectionTitleProps {
 
 function SectionTitle({ title, id }: SectionTitleProps) {
   return (
-    <div id={id} className={`section-title bg-red-700 text-center mb-6`}>
+    <div id={id} className={`section-title bg-red-700 text-center`}>
         <h2 className="text-4xl text-white">{title}</h2>
     </div>
   )
