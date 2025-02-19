@@ -1,12 +1,15 @@
 "use client"
 
-import { useRef, useState } from "react";
+import { FormEvent, useRef, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { MdEmail, MdPhone } from "react-icons/md";
 import { BsLinkedin, BsGithub } from "react-icons/bs";
 
 function Contact() {
   const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || "";
+
+  const emailRef = useRef<HTMLInputElement>(null);
+  const messageRef = useRef<HTMLTextAreaElement>(null);
 
   const recaptchaRef = useRef<ReCAPTCHA>(null);
   const [isVerified, setIsVerified] = useState(false);
@@ -37,11 +40,27 @@ function Contact() {
     setIsVerified(false);
   }
 
+  async function send(e: FormEvent) {
+    e.preventDefault();
+  
+    await fetch("/api/emailSender", {  // Fix: Move the `,` inside the `fetch` call
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: emailRef.current?.value,
+        message: messageRef.current?.value
+      }),
+    });
+  }  
+
   return (
     <div id="contact-container" className="h-[80vh] w-[100vw] flex justify-around items-center">
-      <form action="" className="flex flex-col justify-between min-h-[400px] bg-blue-900 p-5 border border-white rounded">
-        <input className="p-3" type="email" placeholder="Votre email : " maxLength={50} required />
-        <textarea className="p-3" name="" id="" placeholder="Votre message : " maxLength={200} rows={4} required></textarea>
+      <form onSubmit={send} className="flex flex-col justify-between min-h-[400px] bg-blue-900 p-5 border border-white rounded">
+        <input ref={emailRef} className="p-3" type="email" placeholder="Votre email : " maxLength={50} required />
+        <textarea ref={messageRef} className="p-3" name="" id="" placeholder="Votre message : " maxLength={200} rows={4} required></textarea>
         <ReCAPTCHA sitekey={siteKey}
         ref={recaptchaRef}
         onChange={handleChange}
