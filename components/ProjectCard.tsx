@@ -3,7 +3,7 @@ import ProjectCardArrow from "./ProjectCardArrow"
 interface projectI {
   projectName: string,
   projectDesc: string,
-  projectThumbnail: "portfolio.png" | "extension.png" | "socialtree.png"
+  projectThumbnail: "portfolio.png" | "extension.png" | "socialtree.png" | "meteo.png"
   projectLink: string,
   inDev?: boolean
   moveLeft: () => void,
