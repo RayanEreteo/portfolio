@@ -37,7 +37,7 @@ function Contact() {
 
   return (
     <div id="contact-container" className="h-[80vh] flex justify-center items-center">
-      <form action="" className="flex flex-col justify-between min-h-[250px]">
+      <form action="" className="flex flex-col justify-between min-h-[350px]">
         <input className="p-3" type="email" placeholder="Votre email : " maxLength={50} required />
         <textarea className="p-3" name="" id="" placeholder="Votre message : " maxLength={200} rows={4} required></textarea>
         <ReCAPTCHA sitekey={siteKey}
