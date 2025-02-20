@@ -23,7 +23,7 @@ export async function POST(req, res) {
             text: message + `\n\nSend by : ${email}`
         };
 
-        new Promise((resolve, reject) => {
+        await new Promise((resolve, reject) => {
             transporter.sendMail(mailOptions, function (error, info) {
                 if (error) {
                     console.log(error);
