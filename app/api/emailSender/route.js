@@ -23,15 +23,18 @@ export async function POST(req, res) {
             text: message + `\n\nSend by : ${email}`
         };
 
-        transporter.sendMail(mailOptions, function (error, info) {
-            if (error) {
-                console.log(error);
-            } else {
-                console.log('Email sent: ' + info.response);
-            }
+        new Promise((resolve, reject) => {
+            transporter.sendMail(mailOptions, function (error, info) {
+                if (error) {
+                    console.log(error);
+                    reject(err)
+                } else {
+                    resolve(info)
+                }
+            })
         })
         return NextResponse.json({ message: 'Email envoyée' });
     } catch (error) {
-        return NextResponse.json({success: false, message: "Une erreur c'est produite. Merci de réessayer"})
+        return NextResponse.json({ success: false, message: "Une erreur c'est produite. Merci de réessayer" })
     }
 }
