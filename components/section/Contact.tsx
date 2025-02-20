@@ -78,11 +78,11 @@ function Contact() {
         </div>
         <div className="contact-info flex items-center mb-5">
           <BsGithub size={50} color="white"/>
-          <p className="font-semibold ml-5">rayabf5@gmail.com</p>
+          <p className="font-semibold ml-5 underline"><a href="https://github.com/RayanEreteo" target="_blank">https://github.com/RayanEreteo</a></p>
         </div>
         <div className="contact-info flex items-center mb-5">
           <BsLinkedin size={50} color="white"/>
-          <p className="font-semibold ml-5">07 44 54 35 56</p>
+          <p className="font-semibold ml-5 underline"><a href="https://www.linkedin.com/in/rayan-ereteo-6998b9254/" target="_blank">https://www.linkedin.com/in/rayan-ereteo-6998b9254/</a></p>
         </div>
       </div>
     </div>
