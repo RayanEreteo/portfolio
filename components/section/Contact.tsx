@@ -14,6 +14,8 @@ function Contact() {
   const recaptchaRef = useRef<ReCAPTCHA>(null);
   const [isVerified, setIsVerified] = useState(false);
 
+  const [emailResponse, setEmailResponse] = useState<any>({})
+
   async function handleCaptchaSubmission(token: string | null) {
     try {
       if (token) {
@@ -43,7 +45,7 @@ function Contact() {
   async function send(e: FormEvent) {
     e.preventDefault();
   
-    await fetch("/api/emailSender", {  // Fix: Move the `,` inside the `fetch` call
+    const res = await fetch("/api/emailSender", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -53,7 +55,11 @@ function Contact() {
         email: emailRef.current?.value,
         message: messageRef.current?.value
       }),
-    });
+    })
+    
+    const data = await res.json()
+    setEmailResponse(data)
+    
   }  
 
   return (
@@ -65,6 +71,7 @@ function Contact() {
         ref={recaptchaRef}
         onChange={handleChange}
         onExpired={handleExpired} />
+        <p className="text-center text-white">{emailResponse.success = true ? emailResponse.message : ""}</p>
         <button disabled={!isVerified} type="submit" className="bg-red-600 p-3 text-white rounded disabled:bg-black disabled:cursor-not-allowed">Envoyer</button>
       </form>
       <div className="contact-info-container text-white">
