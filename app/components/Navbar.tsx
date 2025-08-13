@@ -1,11 +1,11 @@
 function Navbar() {
   return (
-    <nav className="navbar font-franklin flex justify-center items-center h-[20vh] bg-cyan-900 text-white">
+    <nav style={{ backgroundColor: '#dadfe8' }} className="navbar font-franklin flex justify-center items-center h-[20vh] text-black">
         <ul className="flex flex-row justify-around w-full">
-            <li><a className="font-extrabold text-3xl" href="">Introduction</a></li>
-            <li><a className="font-extrabold text-3xl" href="">Competences</a></li>
-            <li><a className="font-extrabold text-3xl" href="">Projets</a></li>
-            <li><a className="font-extrabold text-3xl" href="">Contact</a></li>
+            <li className="flex flex-row"><img className="white-svg mr-5" src="diamond.svg" alt="diamond" width={30} /><a className=" font-extrabold text-3xl" href="">Introduction</a></li>
+            <li className="flex flex-row"><img className="white-svg mr-5" src="diamond.svg" alt="diamond" width={30} /><a className=" font-extrabold text-3xl" href="">Competences</a></li>
+            <li className="flex flex-row"><img className="white-svg mr-5" src="diamond.svg" alt="diamond" width={30} /><a className=" font-extrabold text-3xl" href="">Projets</a></li>
+            <li className="flex flex-row"><img className="white-svg mr-5" src="diamond.svg" alt="diamond" width={30} /><a className=" font-extrabold text-3xl" href="">Contact</a></li>
         </ul>
     </nav>
   )
