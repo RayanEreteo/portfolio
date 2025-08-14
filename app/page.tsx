@@ -1,7 +1,9 @@
+import Introduction from "./sections/Introduction";
+
 export default function Home() {
   return (
-    <main className="">
-      
+    <main className="font-franklin">
+      <Introduction />
     </main>
   );
 }
