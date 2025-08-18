@@ -8,7 +8,7 @@ function Navbar() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ type: "spring", stiffness: 60, damping: 12 }}
       style={{ backgroundColor: '#dadfe8' }}
-      className="font-franklin navbar flex justify-center items-center h-[20vh] text-black"
+      className="font-franklin navbar flex justify-center items-center h-[10vh] text-black"
     >
       <ul className="flex flex-row justify-around w-full">
         <li className="flex flex-row group">
