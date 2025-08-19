@@ -1,5 +1,3 @@
-// TODO : Corriger le bug de l'index
-
 "use client"
 import { useEffect, useState } from "react"
 
@@ -12,15 +10,11 @@ function Typewriter({textToWrite, typeSpeed}: Typewriter) {
   const [finalText, setfinalText] = useState("")
 
   useEffect(() => {
-    let index: number = 0
-    const interval = setInterval(() => {
-        setfinalText((prev) => prev += textToWrite[index])
-        index++
-        if (index >= textToWrite.length - 1) {
-          clearInterval(interval)
-        }
-    }, typeSpeed)
-  }, [])
+    if (finalText.length < textToWrite.length) {
+      const timeout = setTimeout(() => setfinalText(textToWrite.substring(0, finalText.length + 1)), typeSpeed);
+      return () => clearTimeout(timeout);
+    }
+  }, [finalText]);
   
 
   return (
