@@ -12,8 +12,27 @@
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+#name-drop {
+  background: -webkit-linear-gradient(#9500ff, #f47474);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.normal-text {
+  font-size: 1.2rem;
+  font-weight: light;
+}
+
+.medium-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.medium-title::first-letter {
+  font-size: 2rem;
+  font-weight: bold;
+  font-style: italic;
+  color: rgb(64, 14, 170);
+  margin-right: 0.2rem;
 }
