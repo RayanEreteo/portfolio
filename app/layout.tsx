@@ -4,7 +4,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 
 const librefranklin = Libre_Franklin({
-  variable: "--font-franklin",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
 });
 
@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${librefranklin.variable} antialiased`}
+        className={`${librefranklin.className} antialiased`}
       >
         <Navbar />
         {children}
