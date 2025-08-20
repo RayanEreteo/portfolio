@@ -17,7 +17,7 @@ function Typewriter({textToWrite, typeSpeed}: Typewriter) {
   }, [finalText]);
 
   return (
-    <p className="mt-5 font-mono font-bold">{finalText}</p>
+    <p className="mb-[5rem] font-mono font-bold">{finalText}</p>
   )
 }
 
