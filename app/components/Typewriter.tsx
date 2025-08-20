@@ -15,7 +15,6 @@ function Typewriter({textToWrite, typeSpeed}: Typewriter) {
       return () => clearTimeout(timeout);
     }
   }, [finalText]);
-  
 
   return (
     <p className="mt-5 font-mono font-bold">{finalText}</p>
