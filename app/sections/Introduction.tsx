@@ -10,7 +10,7 @@ function Introduction() {
           <p className="normal-text">Bienvenue sur mon portfolio où vous trouverez des informations sur mes compétences, mes projets et comment me contacter.</p>
         </div>
         <h3 className="medium-title">Qui suis-je ?</h3>
-        <div className="soft-skills-cards-container flex justify-around mt-[3rem]">
+        <div className="soft-skills-cards-container flex flex-col items-center sm:flex-row md:flex-row lg:flex-row lg:justify-around mt-[3rem]">
           <SoftskillsCard title="Communication" description="Capacité à exprimer des idées clairement et à écouter les autres." />
           <SoftskillsCard title="Passioné" description="Un intérêt profond pour la technologie et l'innovation." />
           <SoftskillsCard title="Résolution de problèmes" description="Capacité à identifier des problèmes et à proposer des solutions." />
