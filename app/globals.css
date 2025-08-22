@@ -12,6 +12,11 @@
   }
 }
 
+html, body {
+	position:relative;
+	overflow-x:hidden;
+}
+
 #name-drop {
   background: -webkit-linear-gradient(#9500ff, #f47474);
   -webkit-background-clip: text;
