@@ -10,7 +10,7 @@ const librefranklin = Libre_Franklin({
 
 export const metadata: Metadata = {
   title: "Rayan Ereteo",
-  description: "Bienvenue sur mon portfolio",
+  description: "Bienvenue sur mon site web.",
 };
 
 export default function RootLayout({
