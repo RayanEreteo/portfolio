@@ -1,6 +1,10 @@
+"use client"
+
 function Competences() {
   return (
-    <div>Competences</div>
+    <div>
+        <img src="" alt=""/>
+    </div>
   )
 }
 
