@@ -27,6 +27,14 @@ html, body {
 .normal-text {
   font-size: 1.2rem;
   font-weight: light;
+  margin-bottom: 1rem;
+}
+
+.large-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 .medium-title {
@@ -37,6 +45,14 @@ html, body {
 
 .medium-title::first-letter {
   font-size: 2rem;
+  font-weight: bold;
+  font-style: italic;
+  color: rgb(64, 14, 170);
+  margin-right: 0.2rem;
+}
+
+.large-title::first-letter {
+  font-size: 5rem;
   font-weight: bold;
   font-style: italic;
   color: rgb(64, 14, 170);
