@@ -26,9 +26,9 @@ function Competences() {
                 </div>
             </div>
             <div className="tech-skills-section flex flex-row">
-                <SoftskillsCard title="Communication" description="Capacité à exprimer des idées clairement et à écouter les autres." />
-                <SoftskillsCard title="Passioné" description="Un intérêt profond pour la technologie et l'innovation." />
-                <SoftskillsCard title="Résolution de problèmes" description="Capacité à identifier des problèmes et à proposer des solutions." />
+                <SoftskillsCard title="SEO" description="Capacité à optimiser le contenu pour les moteurs de recherche." />
+                <SoftskillsCard title="Optimisation" description="Capacité à améliorer les performances et l'efficacité des systèmes." />
+                <SoftskillsCard title="Responsive" description="Capacité à créer des designs adaptatifs et à résoudre des problèmes d'affichage." />
             </div>
         </div>
     )
