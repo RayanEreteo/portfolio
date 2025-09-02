@@ -1,4 +1,4 @@
-import Introduction from "./sections/Introduction";
+import Introduction from "./components/sections/Introduction";
 
 export default function Home() {
   return (

@@ -1,5 +1,5 @@
-import SoftskillsCard from "../components/Softskillscard"
-import Typewriter from "../components/Typewriter"
+import SoftskillsCard from "../Softskillscard"
+import Typewriter from "../Typewriter"
 
 function Introduction() {
   return (

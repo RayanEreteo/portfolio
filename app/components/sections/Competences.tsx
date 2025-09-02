@@ -1,5 +1,5 @@
-import SkillsWrapper from "../components/SkillsWrapper"
-import SoftskillsCard from "../components/Softskillscard"
+import SkillsWrapper from "../SkillsWrapper"
+import SoftskillsCard from "../Softskillscard"
 
 function Competences() {
     return (

@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Competences from '../sections/Competences'
+import Competences from '../components/sections/Competences'
 
 function Skills() {
     return (
