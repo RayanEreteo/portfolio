@@ -2,7 +2,9 @@ import Projets from "../components/sections/Projets"
 
 function Projects() {
   return (
-    <Projets />
+    <section id="projects">
+      <Projets />
+    </section>
   )
 }
 
