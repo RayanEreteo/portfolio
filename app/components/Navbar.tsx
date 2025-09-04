@@ -26,7 +26,7 @@ function Navbar() {
           </li>
           <li className="flex flex-row group">
             <img className="mr-5 opacity-0 group-hover:opacity-100 group-hover:scale-50 transition-all duration-300" src="diamond.svg" alt="diamond" width={30} />
-            <a className=" font-light text-3xl" href="/contact">Contact</a>
+            <a className=" font-light text-3xl" href="/contact">Contact & CV</a>
           </li>
         </ul>
       </motion.nav>
@@ -43,7 +43,7 @@ function Navbar() {
             <a className="font-light text-3xl" href="/projects">Projets</a>
           </li>
           <li className="mb-3">
-            <a className="font-light text-3xl" href="/contact">Contact</a>
+            <a className="font-light text-3xl" href="/contact">Contact & CV</a>
           </li>
         </ul>
       </div>
