@@ -3,7 +3,9 @@ import ContactCV from '../components/sections/ContactCV'
 
 function Contact() {
   return (
-    <ContactCV />
+    <section id='contact'>
+      <ContactCV />
+    </section>
   )
 }
 
