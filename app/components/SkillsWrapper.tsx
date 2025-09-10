@@ -8,14 +8,14 @@ type SkillsWrapperInfo = {
 }
 
 function SkillsWrapper({ src, alt, techName,w }: SkillsWrapperInfo) {
-    const imageSize: number = 70
+    const IMAGE_SIZE: number = 70
 
     return (
         <div className="skill">
             <Image
                 src={src}
-                width={w && w || imageSize}
-                height={imageSize}
+                width={w && w || IMAGE_SIZE}
+                height={IMAGE_SIZE}
                 alt={alt}
             />
             <p className="mt-5">{techName}</p>
