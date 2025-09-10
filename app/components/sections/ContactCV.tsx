@@ -1,12 +1,41 @@
 "use client"
 import { useState } from "react"
 
+type ResponseData = {
+    success?: boolean;
+    message?: string;
+};
+
 function ContactCV() {
     const [loading, setLoading] = useState<boolean>()
+    const [responseData, setResponseData] = useState<ResponseData>({})
 
-    function sendEmail(e: React.FormEvent<HTMLFormElement>){
+    const API_LINK = "/api/mail/send"
+
+    async function sendEmail(e: React.FormEvent<HTMLFormElement>){
         e.preventDefault();
         setLoading(true);
+
+        const DATA = {
+            name: "Test",
+            email: "test@mail",
+            message: "Ceci est un test"
+        }
+        const JSON_DATA = JSON.stringify(DATA)
+
+        try {
+            const res = await fetch(API_LINK, {
+                method: "POST",
+                body: JSON_DATA
+            })
+            const data = res.json()
+            console.log(data)
+        } catch (error) {
+            console.error(error)
+        } finally {
+            setLoading(false)
+        }
+        
     }
 
     return (
@@ -21,8 +50,9 @@ function ContactCV() {
                     <input type="text" name="name" placeholder="Nom Complet" required className="border border-gray-300 rounded-lg p-2 m-2 w-64" />
                     <input type="email" name="email" placeholder="Email" required className="border border-gray-300 rounded-lg p-2 m-2 w-64" />
                     <textarea name="message" minLength={10} maxLength={150} placeholder="Message" required className="border border-gray-300 rounded-lg p-2 m-2 w-64 h-60 resize-none"></textarea>
-                    <button type="submit" className="bg-blue-500 text-white rounded-lg p-2 m-2 hover:bg-blue-600 hover:cursor-pointer">{loading ? "Envoi en cours..." : "Envoyer"}</button>
+                    <button type="submit" disabled={loading} className="bg-blue-500 text-white rounded-lg p-2 m-2 hover:bg-blue-600 hover:cursor-pointer disabled:bg-black disabled:cursor-not-allowed">{loading ? "Envoi en cours..." : "Envoyer"}</button>
                 </form>
+                <p className="status-message">{responseData.message}</p>
             </div>
         </div>
     )
