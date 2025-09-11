@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
 // Configuration du transporteur SMTP
-const transporter = nodemailer.createTransport({
+const TRANSPORTER = nodemailer.createTransport({
     service: 'gmail',
     auth: {
         user: process.env.EMAIL_USER,
@@ -19,7 +19,7 @@ function sendMail(name: string, email: string, message: string) {
         text: message,
     };
 
-    return transporter.sendMail(mailOptions);
+    return TRANSPORTER.sendMail(mailOptions);
 }
 
 // Gestionnaire de la route API
