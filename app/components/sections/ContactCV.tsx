@@ -28,8 +28,8 @@ function ContactCV() {
                 method: "POST",
                 body: JSON_DATA
             })
-            const data = res.json()
-            console.log(data)
+            const data = await res.json()
+            setResponseData({success: data.success, message: data.message})
         } catch (error) {
             console.error(error)
         } finally {
