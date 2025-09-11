@@ -1,5 +1,6 @@
 "use client"
-import { useState } from "react"
+import { b } from "framer-motion/client";
+import { useState, useRef } from "react"
 
 type ResponseData = {
     success?: boolean;
@@ -10,6 +11,10 @@ function ContactCV() {
     const [loading, setLoading] = useState<boolean>()
     const [responseData, setResponseData] = useState<ResponseData>({})
 
+    const nameRef = useRef<HTMLInputElement>(null)
+    const emailRef = useRef<HTMLInputElement>(null)
+    const messageRef = useRef<HTMLTextAreaElement>(null)
+
     const API_LINK = "/api/mail/send"
 
     async function sendEmail(e: React.FormEvent<HTMLFormElement>){
@@ -17,9 +22,9 @@ function ContactCV() {
         setLoading(true);
 
         const DATA = {
-            name: "Test",
-            email: "test@mail",
-            message: "Ceci est un test"
+            name: nameRef.current?.value,
+            email: emailRef.current?.value,
+            message: messageRef.current?.value
         }
         const JSON_DATA = JSON.stringify(DATA)
 
@@ -47,12 +52,12 @@ function ContactCV() {
             </div>
             <div className="form-container mt-6 border-2 rounded border-black-50 bg-[#f0f0f0] w-[19rem] m-auto">
                 <form onSubmit={sendEmail} className="flex flex-col items-center font-bold placeholder:italic p-4">
-                    <input type="text" name="name" placeholder="Nom Complet" required className="border border-gray-300 rounded-lg p-2 m-2 w-64" />
-                    <input type="email" name="email" placeholder="Email" required className="border border-gray-300 rounded-lg p-2 m-2 w-64" />
-                    <textarea name="message" minLength={10} maxLength={150} placeholder="Message" required className="border border-gray-300 rounded-lg p-2 m-2 w-64 h-60 resize-none"></textarea>
+                    <input ref={nameRef} type="text" name="name" placeholder="Nom Complet" required className="border border-gray-300 rounded-lg p-2 m-2 w-64" />
+                    <input ref={emailRef} type="email" name="email" placeholder="Email" required className="border border-gray-300 rounded-lg p-2 m-2 w-64" />
+                    <textarea ref={messageRef} name="message" minLength={10} maxLength={150} placeholder="Message" required className="border border-gray-300 rounded-lg p-2 m-2 w-64 h-60 resize-none"></textarea>
                     <button type="submit" disabled={loading} className="bg-blue-500 text-white rounded-lg p-2 m-2 hover:bg-blue-600 hover:cursor-pointer disabled:bg-black disabled:cursor-not-allowed">{loading ? "Envoi en cours..." : "Envoyer"}</button>
                 </form>
-                <p className="status-message">{responseData.message}</p>
+                <p className="status-message mb-3">{responseData.message}</p>
             </div>
         </div>
     )
